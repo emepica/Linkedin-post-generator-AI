@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+    <div class="container">
     <header>
-        <h1>LinkedIn Post Generator</h1>
+        <h1>LinkedIn AI Post Generator</h1>
     </header>
     <main>
-        <p>Enter the content for your LinkedIn post below and click "Generate Post" to see the formatted output.</p>
-        <input id="postInput" placeholder="What do you want to share on LinkedIn?" autofocus required></input>
-        <input type="submit" onclick="generatePost()" value="Generate Post">
-        <div id="output"></div>
+        <form onsubmit="event.preventDefault(); generatePost();">
+        <input id="postInput" placeholder="What do you want to share on LinkedIn?" autofocus required autocomplete="off" class="form-content"></input>
+        <input type="submit" onclick="generatePost()" value="Generate Post" class="form-button">
+        </form>
+        <div id="result" class="post-generated">The post will be here</div>
     </main>
 <footer>
-        <p>&copy; 2026 LinkedIn Post Generator. Coded By Emeline Picard | Open-sourced on GitHub | Hosted on Netlify.</p>
+        <p>&copy; 2026 LinkedIn Post Generator. Coded By Emeline Picard | Open-sourced on <a href="https://github.com/emepica/Linkedin-post-generator-AI" target="_blank">GitHub</a> | Hosted on <a href="https://postgeneratorai-epic.netlify.app/" target="_blank">Netlify</a>.</p>
     </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
