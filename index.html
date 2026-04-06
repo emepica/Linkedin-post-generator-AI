@@ -14,11 +14,14 @@
         <h1>LinkedIn AI Post Generator</h1>
     </header>
     <main>
+        <div class="form-container">
         <form id= "post-generator-form" onsubmit="event.preventDefault(); generatePost();">
         <input id="instructionInput" placeholder="Share something that you did or felt recently" autofocus required autocomplete="off" class="form-content"></input>
         <input type="submit" onclick="generatePost()" value="Generate Post" class="form-button">
         </form>
-        <div id="post-result" class="post-generated"></div>
+        <div class="ideas">Ideas: Missed a deadline, Went to a networking event, Current personal situation...</div>  
+        </div>
+        <div id="post-result" class="post-generated hidden"></div>
     </main>
 <footer>
         <p>&copy; 2026 LinkedIn Post Generator. Coded By Emeline Picard | Open-sourced on <a href="https://github.com/emepica/Linkedin-post-generator-AI" target="_blank">GitHub</a> | Hosted on <a href="https://postgeneratorai-epic.netlify.app/" target="_blank">Netlify</a>.</p>
