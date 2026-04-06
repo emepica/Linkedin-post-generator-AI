@@ -24,7 +24,7 @@ a:hover {
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: inline;
     gap: 15px;
     margin-bottom: 30px;
 }
@@ -63,6 +63,7 @@ input, select {
     padding: 20px;
     background-color: white;
     border-left: 4px solid #2e4ec4;
+    line-height: 1.5;
 }
 footer {
     text-align: center;

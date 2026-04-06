@@ -6,6 +6,7 @@
     <title>LinkedIn Post Generator</title>
     <link rel="stylesheet" href="src/style.css">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,7 +15,7 @@
     </header>
     <main>
         <form id= "post-generator-form" onsubmit="event.preventDefault(); generatePost();">
-        <input id="postInput" placeholder="What do you want to share on LinkedIn?" autofocus required autocomplete="off" class="form-content"></input>
+        <input id="instructionInput" placeholder="Share something that you did or felt recently" autofocus required autocomplete="off" class="form-content"></input>
         <input type="submit" onclick="generatePost()" value="Generate Post" class="form-button">
         </form>
         <div id="post-result" class="post-generated"></div>
