@@ -86,5 +86,37 @@ footer {
     margin-top: 50px;
     font-size: 10px;
     padding: 20px;
-
 }   
+
+.loading-text {
+    color: #555;
+    font-style: italic;
+    font-display: swap;
+}
+/* the loading text is a bit of fun, not really necessary, but it adds a nice touch to the user experience */
+.loading-gradient {
+	place-self: center;
+	background: linear-gradient(90deg, rgb(58, 58, 215), rgb(143, 42, 165), rgb(58, 58, 215)) -100%/ 200%;
+	/* being excessively careful with compat, 
+	 * though this has been supported unprefixed and 
+	 * in the shorthand across major browsers for a while;
+	 * but it catches the latest browser versions supported 
+	 * on Wndows XP, 7 and 8; yeah, they exist in 2025 */
+	-webkit-background-clip: text;
+	        background-clip: text;
+	/* use color, don't use -webkit-text-fill-color anymore, 
+	 * was meant to solve a problem we haven't had in years */
+	color: transparent;
+    font-weight: bold;
+	animation: shimmer 2s linear infinite
+}
+
+@keyframes shimmer { to { background-position: 100% } }
+
+/* avoid problems in high contrast mode */
+@media (forced-colors: active) {
+  p {
+    background: #212121;
+    color: aquamarine
+  }
+}
