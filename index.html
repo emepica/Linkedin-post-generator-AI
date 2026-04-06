@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn Post Generator</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div class="container">
@@ -12,16 +13,16 @@
         <h1>LinkedIn AI Post Generator</h1>
     </header>
     <main>
-        <form onsubmit="event.preventDefault(); generatePost();">
+        <form id= "post-generator-form" onsubmit="event.preventDefault(); generatePost();">
         <input id="postInput" placeholder="What do you want to share on LinkedIn?" autofocus required autocomplete="off" class="form-content"></input>
         <input type="submit" onclick="generatePost()" value="Generate Post" class="form-button">
         </form>
-        <div id="result" class="post-generated">The post will be here</div>
+        <div id="post-result" class="post-generated"></div>
     </main>
 <footer>
         <p>&copy; 2026 LinkedIn Post Generator. Coded By Emeline Picard | Open-sourced on <a href="https://github.com/emepica/Linkedin-post-generator-AI" target="_blank">GitHub</a> | Hosted on <a href="https://postgeneratorai-epic.netlify.app/" target="_blank">Netlify</a>.</p>
     </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="src/index.js"></script>
 </body>
 </html>
